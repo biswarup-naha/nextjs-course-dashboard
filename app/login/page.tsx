@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "@/app/ui/login.module.css";
 import clsx from "clsx";
+import Link from "next/link";
 
 function Login() {
     interface FormError {
@@ -66,6 +67,7 @@ function Login() {
                             <button type="submit" disabled={isSubmitting} className={clsx({
                                 "bg-slate-500": isSubmitting
                             })}>Login</button>
+                            <div className="flex items-center justify-center pt-5"><Link href="/" className="text-3xl">🔙</Link></div>
                         </Form>
                     )}
                 </Formik>
