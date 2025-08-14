@@ -3,6 +3,7 @@ import { inter } from "./ui/fonts";
 import ChatWidget from "./components/ChatWidget";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Providers from "./provider";
 
 export default function RootLayout({
   children,
@@ -12,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        {children}
+        <Providers>{children}</Providers>
         <ChatWidget />
         <Analytics />
         <SpeedInsights />
